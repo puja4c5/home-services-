@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <title>HomeServe Pro - Premium Home Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium home services with modern booking, AI assistance, and real-time tracking" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/animations/scale.css" />
+    <link rel="manifest" href="manifest.json" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="glass-effect">
+      <div class="logo">
+        <img src="https://via.placeholder.com/150x50?text=HomeServePro" alt="HomeServe Pro Logo" />
+      </div>
+      <nav>
+        <a href="#" class="active" data-tippy-content="Home">Home</a>
+        <a href="#services" data-tippy-content="Our Services">Services</a>
+        <a href="#booking" data-tippy-content="Book a Service">Book Now</a>
+        <a href="#about" data-tippy-content="About Us">About</a>
+        <a href="#contact" data-tippy-content="Contact Us">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-secondary" id="voice-search-btn">
+          <i class="fas fa-microphone"></i> Voice Search
+        </button>
+        <button class="btn btn-primary" id="open-chat-btn">
+          <i class="fas fa-comment-dots"></i> AI Chat
+        </button>
+      </div>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Premium Home Services, <span class="highlight">Reimagined</span></h1>
+        <p>Experience the future of home services with AI-powered recommendations, real-time tracking, and seamless booking.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg">Book a Service</button>
+          <button class="btn btn-outline btn-lg">Explore Services</button>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+        <img src="https://via.placeholder.com/600x400?text=Home+Services" alt="Home Services" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our <span class="highlight">Services</span></h2>
+        <p>Discover our range of premium home services tailored to your needs</p>
+      </div>
+      
+      <div class="swiper services-slider">
+        <div class="swiper-wrapper">
+          <!-- Service Card 1 -->
+          <div class="swiper-slide">
+            <div class="service-card glass-effect" data-aos="zoom-in">
+              <div class="service-icon">
+                <i class="fas fa-broom"></i>
+              </div>
+              <h3>House Cleaning</h3>
+              <p>Professional cleaning services for homes of all sizes.</p>
+              <div class="service-rating">
+                <span class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="rating-count">4.8 (120+)</span>
+              </div>
+              <button class="btn btn-secondary">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="swiper-slide">
+            <div class="service-card glass-effect" data-aos="zoom-in" data-aos-delay="100">
+              <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h3>Plumbing</h3>
+              <p>Expert plumbing repairs and installations.</p>
+              <div class="service-rating">
+                <span class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="rating-count">5.0 (85+)</span>
+              </div>
+              <button class="btn btn-secondary">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="swiper-slide">
+            <div class="service-card glass-effect" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Electrical</h3>
+              <p>Certified electricians for all your electrical needs.</p>
+              <div class="service-rating">
+                <span class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </span>
+                <span class="rating-count">4.1 (95+)</span>
+              </div>
+              <button class="btn btn-secondary">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Service Card 4 -->
+          <div class="swiper-slide">
+            <div class="service-card glass-effect" data-aos="zoom-in" data-aos-delay="300">
+              <div class="service-icon">
+                <i class="fas fa-paint-roller"></i>
+              </div>
+              <h3>Painting</h3>
+              <p>Transform your space with our professional painting services.</p>
+              <div class="service-rating">
+                <span class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="rating-count">4.7 (110+)</span>
+              </div>
+              <button class="btn btn-secondary">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Service Card 5 -->
+          <div class="swiper-slide">
+            <div class="service-card glass-effect" data-aos="zoom-in" data-aos-delay="400">
+              <div class="service-icon">
+                <i class="fas fa-snowflake"></i>
+              </div>
+              <h3>HVAC Services</h3>
+              <p>Heating, ventilation, and air conditioning solutions.</p>
+              <div class="service-rating">
+                <span class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </span>
+                <span class="rating-count">4.2 (75+)</span>
+              </div>
+              <button class="btn btn-secondary">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Booking System Section -->
+    <section id="booking" class="booking glass-effect">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Book Your <span class="highlight">Service</span></h2>
+        <p>Our interactive booking system makes scheduling services a breeze</p>
+      </div>
+      
+      <div class="booking-container" data-aos="fade-up">
+        <div class="booking-steps">
+          <div class="booking-step active">
+            <div class="step-number">1</div>
+            <div class="step-text">Select Service</div>
+          </div>
+          <div class="booking-step">
+            <div class="step-number">2</div>
+            <div class="step-text">Choose Date & Time</div>
+          </div>
+          <div class="booking-step">
+            <div class="step-number">3</div>
+            <div class="step-text">Enter Details</div>
+          </div>
+          <div class="booking-step">
+            <div class="step-number">4</div>
+            <div class="step-text">Confirm Booking</div>
+          </div>
+        </div>
+        
+        <div class="booking-form-container">
+          <!-- Step 1: Service Selection -->
+          <div class="booking-form active" id="step1">
+            <h3>Select a Service</h3>
+            <div class="service-selection">
+              <div class="service-option" data-service="cleaning">
+                <i class="fas fa-broom"></i>
+                <span>Cleaning</span>
+              </div>
+              <div class="service-option" data-service="plumbing">
+                <i class="fas fa-wrench"></i>
+                <span>Plumbing</span>
+              </div>
+              <div class="service-option" data-service="electrical">
+                <i class="fas fa-bolt"></i>
+                <span>Electrical</span>
+              </div>
+              <div class="service-option" data-service="painting">
+                <i class="fas fa-paint-roller"></i>
+                <span>Painting</span>
+              </div>
+              <div class="service-option" data-service="hvac">
+                <i class="fas fa-snowflake"></i>
+                <span>HVAC</span>
+              </div>
+            </div>
+            <div class="ai-recommendation">
+              <h4><i class="fas fa-robot"></i> AI Recommendation</h4>
+              <p>Based on your previous bookings and the season, we recommend <strong>HVAC Maintenance</strong> for optimal home comfort.</p>
+            </div>
+            <button class="btn btn-primary next-step">Continue</button>
+          </div>
+          
+          <!-- Step 2: Date & Time Selection -->
+          <div class="booking-form" id="step2">
+            <h3>Choose Date & Time</h3>
+            <div class="calendar-container">
+              <div class="calendar-header">
+                <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                <h4 id="current-month">September 2023</h4>
+                <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <div class="calendar-grid" id="calendar-grid">
+                <!-- Calendar will be generated by JavaScript -->
+              </div>
+            </div>
+            <div class="time-slots">
+              <h4>Available Time Slots</h4>
+              <div class="time-slot-options">
+                <div class="time-slot available">9:00 AM</div>
+                <div class="time-slot available">10:30 AM</div>
+                <div class="time-slot booked">12:00 PM</div>
+                <div class="time-slot available">1:30 PM</div>
+                <div class="time-slot available">3:00 PM</div>
+                <div class="time-slot booked">4:30 PM</div>
+              </div>
+            </div>
+            <div class="booking-navigation">
+              <button class="btn btn-outline prev-step">Back</button>
+              <button class="btn btn-primary next-step">Continue</button>
+            </div>
+          </div>
+          
+          <!-- Step 3: Customer Details -->
+          <div class="booking-form" id="step3">
+            <h3>Enter Your Details</h3>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Service Address</label>
+              <input type="text" id="address" placeholder="123 Main St, City, State" required>
+            </div>
+            <div class="form-group">
+              <label for="notes">Special Instructions</label>
+              <textarea id="notes" placeholder="Any special requirements or instructions..."></textarea>
+            </div>
+            <div class="booking-navigation">
+              <button class="btn btn-outline prev-step">Back</button>
+              <button class="btn btn-primary next-step">Continue</button>
+            </div>
+          </div>
+          
+          <!-- Step 4: Booking Summary -->
+          <div class="booking-form" id="step4">
+            <h3>Booking Summary</h3>
+            <div class="booking-summary">
+              <div class="summary-item">
+                <span class="summary-label">Service:</span>
+                <span class="summary-value" id="summary-service">HVAC Maintenance</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Date:</span>
+                <span class="summary-value" id="summary-date">September 15, 2023</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Time:</span>
+                <span class="summary-value" id="summary-time">10:30 AM</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Name:</span>
+                <span class="summary-value" id="summary-name">John Doe</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Address:</span>
+                <span class="summary-value" id="summary-address">123 Main St, City, State</span>
+              </div>
+            </div>
+            
+            <div class="price-calculator glass-effect">
+              <h4>Price Estimate</h4>
+              <div class="price-item">
+                <span>Base Service Fee</span>
+                <span>$120.00</span>
+              </div>
+              <div class="price-item">
+                <span>Equipment Fee</span>
+                <span>$35.00</span>
+              </div>
+              <div class="price-item discount">
+                <span>Loyalty Discount</span>
+                <span>-$15.00</span>
+              </div>
+              <div class="price-total">
+                <span>Total</span>
+                <span>$140.00</span>
+              </div>
+            </div>
+            
+            <div class="booking-navigation">
+              <button class="btn btn-outline prev-step">Back</button>
+              <button class="btn btn-primary" id="confirm-booking">Confirm Booking</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Smart <span class="highlight">Features</span></h2>
+        <p>Experience the future of home services with our innovative features</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI-Powered Recommendations</h3>
+          <p>Our AI analyzes your home's needs and suggests the most relevant services based on season, previous bookings, and maintenance schedules.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Real-Time Tracking</h3>
+          <p>Track your service provider's location and estimated arrival time in real-time, just like you would with a food delivery service.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>AI Chat Support</h3>
+          <p>Get instant answers to your questions and troubleshooting help from our AI assistant, available 24/7.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3>Rewards & Gamification</h3>
+          <p>Earn points with every booking, refer friends for bonuses, and spin the wheel for exclusive discounts on future services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials glass-effect">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Customer <span class="highlight">Testimonials</span></h2>
+        <p>See what our satisfied customers have to say about our services</p>
+      </div>
+      
+      <div class="swiper testimonials-slider">
+        <div class="swiper-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>"The AI recommendations were spot on! I would have forgotten about my annual HVAC maintenance if the app hadn't reminded me. The technician was professional and on time."</p>
+                <div class="testimonial-author">
+                  <h4>Sarah Johnson</h4>
+                  <span>Verified Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"The real-time tracking feature is a game-changer. I didn't have to take the whole day off work waiting for the plumber. I knew exactly when they would arrive."</p>
+                <div class="testimonial-author">
+                  <h4>Michael Chen</h4>
+                  <span>Verified Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Rodriguez">
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>"I won a 15% discount on my house cleaning service with the spin-the-wheel feature! The booking process was so easy, and the cleaners did an amazing job."</p>
+                <div class="testimonial-author">
+                  <h4>Emily Rodriguez</h4>
+                  <span>Verified Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Gamification Section -->
+    <section class="gamification">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Rewards & <span class="highlight">Gamification</span></h2>
+        <p>Earn rewards, refer friends, and win exclusive discounts</p>
+      </div>
+      
+      <div class="gamification-container">
+        <!-- Referral Program -->
+        <div class="referral-program glass-effect" data-aos="fade-right">
+          <h3>Refer & Earn</h3>
+          <p>Invite friends to use our services and earn rewards for both of you!</p>
+          <div class="referral-stats">
+            <div class="referral-stat">
+              <span class="stat-value">5</span>
+              <span class="stat-label">Friends Referred</span>
+            </div>
+            <div class="referral-stat">
+              <span class="stat-value">$75</span>
+              <span class="stat-label">Rewards Earned</span>
+            </div>
+          </div>
+          <div class="referral-link">
+            <input type="text" value="https://homeservepro.com/ref/john123" readonly>
+            <button class="btn btn-secondary" id="copy-referral">Copy</button>
+          </div>
+          <div class="social-share">
+            <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+            <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+            <button class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></button>
+            <button class="social-btn email"><i class="fas fa-envelope"></i></button>
+          </div>
+        </div>
+        
+        <!-- Spin the Wheel -->
+        <div class="spin-wheel-container" data-aos="zoom-in">
+          <h3>Spin & Win</h3>
+          <p>Spin the wheel for a chance to win exclusive discounts!</p>
+          <div class="wheel-container">
+            <div class="wheel" id="discount-wheel">
+              <div class="wheel-section" data-prize="5%"><span>5% OFF</span></div>
+              <div class="wheel-section" data-prize="10%"><span>10% OFF</span></div>
+              <div class="wheel-section" data-prize="15%"><span>15% OFF</span></div>
+              <div class="wheel-section" data-prize="20%"><span>20% OFF</span></div>
+              <div class="wheel-section" data-prize="25%"><span>25% OFF</span></div>
+              <div class="wheel-section" data-prize="Free"><span>FREE Service</span></div>
+              <div class="wheel-section" data-prize="Try Again"><span>Try Again</span></div>
+              <div class="wheel-section" data-prize="50%"><span>50% OFF</span></div>
+            </div>
+            <div class="wheel-pointer"></div>
+          </div>
+          <button class="btn btn-primary" id="spin-btn">Spin Now</button>
+          <p class="spin-note">You have 1 free spin available</p>
+        </div>
+        
+        <!-- Leaderboard -->
+        <div class="leaderboard glass-effect" data-aos="fade-left">
+          <h3>Service Leaderboard</h3>
+          <p>Our top-rated service providers this month</p>
+          <div class="leaderboard-list">
+            <div class="leaderboard-item">
+              <div class="rank">1</div>
+              <div class="provider-info">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Provider">
+                <div>
+                  <h4>Robert Williams</h4>
+                  <span>Electrician</span>
+                </div>
+              </div>
+              <div class="provider-rating">
+                <span>4.9</span>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="leaderboard-item">
+              <div class="rank">2</div>
+              <div class="provider-info">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Provider">
+                <div>
+                  <h4>Jessica Martinez</h4>
+                  <span>House Cleaner</span>
+                </div>
+              </div>
+              <div class="provider-rating">
+                <span>4.8</span>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="leaderboard-item">
+              <div class="rank">3</div>
+              <div class="provider-info">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Provider">
+                <div>
+                  <h4>David Thompson</h4>
+                  <span>Plumber</span>
+                </div>
+              </div>
+              <div class="provider-rating">
+                <span>4.7</span>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Tracking Demo -->
+    <section class="live-tracking glass-effect">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Live <span class="highlight">Tracking</span></h2>
+        <p>Track your service provider in real-time</p>
+      </div>
+      
+      <div class="tracking-demo" data-aos="fade-up">
+        <div class="tracking-map">
+          <!-- Map placeholder - would be replaced with actual map API -->
+          <div class="map-placeholder">
+            <img src="https://via.placeholder.com/800x400?text=Interactive+Map" alt="Interactive Map">
+            <div class="provider-marker">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="home-marker">
+              <i class="fas fa-home"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tracking-info">
+          <div class="provider-info">
+            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Service Provider">
+            <div>
+              <h3>David Thompson</h3>
+              <p>Plumber • 4.7 <i class="fas fa-star"></i></p>
+            </div>
+            <button class="btn btn-outline"><i class="fas fa-phone"></i> Call</button>
+          </div>
+          
+          <div class="tracking-status">
+            <div class="status-item completed">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Service Confirmed</h4>
+                <p>10:15 AM</p>
+              </div>
+            </div>
+            <div class="status-item completed">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4>Provider En Route</h4>
+                <p>10:45 AM</p>
+              </div>
+            </div>
+            <div class="status-item active">
+              <i class="fas fa-circle"></i>
+              <div>
+                <h4>Arriving Soon</h4>
+                <p>ETA: 5 minutes</p>
+              </div>
+            </div>
+            <div class="status-item">
+              <i class="far fa-circle"></i>
+              <div>
+                <h4>Service in Progress</h4>
+                <p>-</p>
+              </div>
+            </div>
+            <div class="status-item">
+              <i class="far fa-circle"></i>
+              <div>
+                <h4>Service Completed</h4>
+                <p>-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="ai-chatbot" id="ai-chatbot">
+      <div class="chatbot-header">
+        <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+        <button id="close-chat-btn"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot">
+          <div class="message-content">
+            <p>👋 Hi there! I'm your HomeServe Pro AI assistant. How can I help you today?</p>
+          </div>
+          <span class="message-time">Just now</span>
+        </div>
+        <div class="message bot">
+          <div class="message-content">
+            <p>I can help you with:</p>
+            <ul>
+              <li>Service recommendations</li>
+              <li>Booking assistance</li>
+              <li>Troubleshooting common issues</li>
+              <li>Answering questions about our services</li>
+            </ul>
+          </div>
+          <span class="message-time">Just now</span>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+        <button id="voice-input"><i class="fas fa-microphone"></i></button>
+      </div>
+      <div class="quick-responses">
+        <button class="quick-response-btn">Book a service</button>
+        <button class="quick-response-btn">Track my service</button>
+        <button class="quick-response-btn">Service recommendations</button>
+      </div>
+    </div>
+
+    <!-- Voice Search Modal -->
+    <div class="voice-search-modal" id="voice-search-modal">
+      <div class="voice-search-content glass-effect">
+        <button id="close-voice-search"><i class="fas fa-times"></i></button>
+        <div class="voice-animation">
+          <div class="voice-wave"></div>
+          <div class="voice-wave"></div>
+          <div class="voice-wave"></div>
+        </div>
+        <h3>Listening...</h3>
+        <p id="voice-transcript">Say something like "Book a plumbing service" or "Show me available electricians"</p>
+        <button class="btn btn-primary" id="stop-voice-search">Stop Listening</button>
+      </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notification-toast">
+      <div class="notification-icon">
+        <i class="fas fa-bell"></i>
+      </div>
+      <div class="notification-content">
+        <h4>Service Update</h4>
+        <p>Your plumber is 10 minutes away!</p>
+      </div>
+      <button class="notification-close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://via.placeholder.com/150x50?text=HomeServePro" alt="HomeServe Pro Logo">
+          <p>Premium home services with modern features and real-time tracking.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Cleaning</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Electrical</a></li>
+              <li><a href="#">Painting</a></li>
+              <li><a href="#">HVAC</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Get the latest updates, tips, and special offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 HomeServe Pro. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+  </body>
+</html>

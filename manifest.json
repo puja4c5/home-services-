@@ -1,0 +1,21 @@
+{
+  "name": "HomeServe Pro",
+  "short_name": "HomeServe",
+  "description": "Premium home services with modern features",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192?text=HSP",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512?text=HSP",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

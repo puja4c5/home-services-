@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "servor --reload"
+  },
+  "dependencies": {
+    "servor": "^4.0.2",
+    "aos": "^2.3.4",
+    "chart.js": "^4.4.1",
+    "swiper": "^11.0.5",
+    "tippy.js": "^6.3.7",
+    "sweetalert2": "^11.10.1",
+    "luxon": "^3.4.4"
+  }
+}
